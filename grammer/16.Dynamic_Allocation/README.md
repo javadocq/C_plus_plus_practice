@@ -31,3 +31,48 @@
   delete [] array_ptr;
   array_ptr = nullptr;
   ```
+
+### Arrays and Pointer
+
+- 배열의 이름은 배열의 첫 요소의 주소를 가리킨다.
+- 포인터 변수의 값은 주소값이다.
+- 포인터 변수와 배열이 같은 주소를 가리킨다면, 포인터 변수와 거의 동일하게 사용
+  -> 차이점: 배열은 주소값을 정의 이후 변경 불가. Sizeof() 반환값이 다르다.
+
+### Const and Pointers
+
+- const의 포인터 (pointers to const)
+  - 데이터가 const / 포인터는 다른 데이터를 가리킬 수 있음
+
+  ```
+  int high_score = 100;
+  int low_score = 60;
+  const int* score_ptr = &high_score; // 역참조의 값을 바꾸는 게 불가능해진다.
+
+  *score_ptr = 80; // ERROR
+  socre_ptr = *low_score; // OK
+  ```
+
+- const인 포인터 (const pointers)
+  - 포인터가 const / 데이터는 변할 수 있음
+
+  ```
+  int high_score = 100;
+  int low_score = 60;
+  int* const score_ptr = &high_score; // 주소값을 바꾸는 게 불가능하다.
+
+  *score_ptr = 80; // OK
+  socre_ptr = *low_score; // ERROR
+  ```
+
+- const의 const인 포인터 (const pointers to const)
+  - 포인터가 const / 데이터는 변할 수 있음
+
+  ```
+  int high_score = 100;
+  int low_score = 60;
+  const int* const score_ptr = &high_score; // 역 참조의 값을 바꾸는 거 & 주소값을 바꾸는 게 불가능하다.
+
+  *score_ptr = 80; // ERROR
+  socre_ptr = *low_score; // ERROR
+  ```

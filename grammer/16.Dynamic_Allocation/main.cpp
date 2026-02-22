@@ -20,5 +20,30 @@ int main() {
     cout << *int_ptr << endl;
     int_ptr = nullptr;
 
+    int scores[] = {100, 95, 90};
+
+    //공통점
+    cout << scores << endl; // 00F3FAF8
+    cout << *scores << endl; // 100
+    cout << scores[0] << endl; // 100
+
+    int* score_ptr = scores;
+    cout <<score_ptr << endl; //00F3FAF8
+    cout << *score_ptr << endl; // 100
+    cout << score_ptr[0] << endl; // 100
+
+    //차이점
+    cout << sizeof(scores) << endl; // 12
+    cout << sizeof(score_ptr) << endl; // 8
+
+
+    cout << score_ptr << endl; // 0x123400
+    cout << (score_ptr + 1) << endl; // 0x123404 == score_pt + 1 * sizeof(int) => 이 sizeof(int, double)을 체크를 해줘야하기 때문에 포인터의 타입이 중요한 것이다.
+    cout << (score_ptr + 2) << endl; // 0x123408
+
+    cout << *score_ptr << endl; // 100
+    cout << *(score_ptr + 1) << endl; // 95
+    cout << *(score_ptr + 2) << endl; // 90
+
     return 0;
 }
