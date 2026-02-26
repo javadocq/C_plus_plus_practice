@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.10)
+project(GrammarStudy)
+
+# 현재 폴더 및 하위 폴더의 모든 .cpp 파일을 찾아서 개별 실행 파일로 만듭니다.
+file(GLOB_RECURSE SOURCES "*.cpp")
+
+foreach(sourcefile ${SOURCES})
+    get_filename_component(name ${sourcefile} NAME_WE)
+    add_executable(${name} ${sourcefile})
+endforeach()
