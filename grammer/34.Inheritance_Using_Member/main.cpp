@@ -2,7 +2,7 @@
 using namespace std;
 
 class Entity {
-protected: 
+protected:
 	int x;
 	int y;
 public:
