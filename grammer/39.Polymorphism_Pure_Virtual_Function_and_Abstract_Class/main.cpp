@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class Entity { 
+class Entity {
 protected:
 	int x, y;
 public:
@@ -25,7 +25,7 @@ public:
 	virtual ~Player() {
 		cout << "Player destructor called" << endl;
 	}
-	virtual void Move(int dx, int dy) { 
+	virtual void Move(int dx, int dy) {
 		x += dx * 2;
 		y += dy * 2;
 	}
