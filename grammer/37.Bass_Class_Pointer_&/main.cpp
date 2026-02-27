@@ -36,7 +36,7 @@ public:
 
 int main() {
 
-	Entity* e = new Player{ 1,1,100,0 }; 
+	Entity* e = new Player{ 1,1,100,0 };
 	e->Move(2, 1);
 	e->PrintPosition();
 
