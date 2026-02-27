@@ -2,26 +2,24 @@
 
 using namespace std;
 
-class Entity { 
+class IEntity { // 순수 가상 함숨만을 가졌기 때문에 인터페이스 클래스이다. 통상  IEntity와 같이 I로 시작하는 이름을 가진다.
 protected:
 	int x, y;
 public:
-	Entity(int x, int y) : x(x), y(y) {}
-	virtual ~Entity() {
+	IEntity(int x, int y) : x(x), y(y) {}
+	virtual ~IEntity() {
 		cout << "Entity destructor called" << endl;
 	}
-	virtual void Move(int dx, int dy) = 0;// 순수 가상 함수. Entity 클래스는 추상 클래스가 된다. Entity 클래스의 객체는 생성할 수 없고, Entity 클래스를 상속받은 클래스에서 Move 함수를 구현해야한다.
-	virtual void PrintPosition() const {
-		cout << "Entity position: " << x << ", " << y << endl;
-	}
+	virtual void Move(int dx, int dy) = 0;
+	virtual void PrintPosition() const = 0;
 };
 
-class Player : public Entity {
+class Player : public IEntity {
 private:
 	int hp;
 	int xp;
 public:
-	Player(int x, int y, int hp, int xp) : Entity(x, y), hp{ hp }, xp{ xp } {}
+	Player(int x, int y, int hp, int xp) : IEntity(x, y), hp{ hp }, xp{ xp } {}
 	virtual ~Player() {
 		cout << "Player destructor called" << endl;
 	}
