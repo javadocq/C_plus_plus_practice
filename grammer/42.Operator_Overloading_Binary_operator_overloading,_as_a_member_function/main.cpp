@@ -21,7 +21,7 @@ public:
 };
 
 Number Add(Number n1, Number n2) {
-	return Number{ n1.GetValue() + n2.GetValue()};
+	return Number{ n1.GetValue() + n2.GetValue() };
 
 }
 
@@ -79,6 +79,5 @@ int main() {
 	else {
 		cout << "p1 and p2 are not equal." << endl;
 	}
-	// p1.operator==(p2)와 같다.
 	return 0;
 }
