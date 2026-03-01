@@ -7,7 +7,7 @@ private:
 	int* ptr;
 	int size;
 public:
-	Array(int val, int size) : size { size }{
+	Array(int val, int size) : size{ size } {
 		ptr = new int[size]; // heap에 size만큼의 int 배열을 동적 할당 (첫 번째 주소값)
 		for (int i = 0; i < size; i++) {
 			ptr[i] = val + i; // 배열의 모든 요소를 val + i로 초기화
