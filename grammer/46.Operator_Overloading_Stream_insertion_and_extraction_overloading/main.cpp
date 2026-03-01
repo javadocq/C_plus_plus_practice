@@ -9,7 +9,7 @@ private:
 public:
 	Point(int x = 0, int y = 0) : x(x), y(y) {}
 	friend Point operator+(const Point& p1, const Point& p2);
-	friend Point operator*(const Point& p, int scalar) { 
+	friend Point operator*(const Point& p, int scalar) {
 		return Point(scalar * p.x, scalar * p.y);
 	};
 	friend Point operator*(int scalar, const Point& p) {
@@ -30,8 +30,8 @@ public:
 };
 
 Point operator+(const Point& p1, const Point& p2) {
-	return Point(p1.x + p2.x, p1.y + p2.y); 
-	
+	return Point(p1.x + p2.x, p1.y + p2.y);
+
 }
 
 ostream& operator<<(ostream& os, const Point& p) { // cout 이라는 게 복사가 불가능하기 때문에 참조자로 받아야 한다. 그리고 체이닝이 가능하려면 반환 타입이 ostream& 이어야 한다.
