@@ -25,12 +25,12 @@ public:
 };
 
 Point operator+(const Point& p1, const Point& p2) {
-	return Point(p1.x + p2.x, p1.y + p2.y); 
+	return Point(p1.x + p2.x, p1.y + p2.y);
 	// 이 전역 연산자 오버로딩은 Point의 멤버 함수가 아니기 때문에 private 멤버에 접근할 수는 없다.
 }
 
 int main() {
-	
+
 	Point p1{ 3, 4 };
 	Point p2{ 3, 4 };
 	Point p3 = p1 + p2; // 이전 예제에서 p1.operator+(p2)로 구현한 연산자 오버로딩이 없다면, 컴파일러는 operator+(p1,p2); 로 구현한 연산자 오버로딩을 찾는다.
@@ -38,7 +38,7 @@ int main() {
 
 	p3 = 3 * p1; // 3.operator*(p1)은 문법적으로 말이 안된다. 전역 연산자 오버로딩이 필요하다. operator*(int, const Point&) 형태로 구현해야 한다.
 	p3.display();
-	
+
 	p3 = p1 * 2; // 이거에 대한 전역 함수도 구현해두면 좋다.
 	p3.display();
 
