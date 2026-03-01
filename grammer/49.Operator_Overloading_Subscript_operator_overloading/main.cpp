@@ -7,17 +7,17 @@ private:
 	int* ptr;
 	int size;
 public:
-	Array(int val, int size) : size { size }{
-		ptr = new int[size]; 
+	Array(int val, int size) : size{ size } {
+		ptr = new int[size];
 		for (int i = 0; i < size; i++) {
-			ptr[i] = val + i; 
+			ptr[i] = val + i;
 		}
 	}
 	int GetSize() const {
 		return size;
 	}
 	Array& operator=(const Array& other) {
-		if (this != &other) { 
+		if (this != &other) {
 			delete[] ptr;
 			this->ptr = new int[other.size];
 			this->size = other.size;
@@ -58,7 +58,7 @@ int main() {
 
 	cout << b[2] << endl; // const를 붙이게 되면 오류 발생
 	// 그래서 연산자 오버로딩을 int형 반환으로도 하나 만들어야 한다.
-	
+
 
 	return 0;
 }
