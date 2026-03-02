@@ -29,5 +29,4 @@ int main() {
 	string str1 = "Hello";
 	string str2 = "World!";
 	cout << MAX(str1, str2) << endl; // string type인 경우니까 길이 비교로 들어간다.
-	// <string>을 안 붙여도 str1과 str2가 string type이기 때문에 자동으로 string 특수화 함수가 호출된다.
 }
