@@ -1,22 +1,2 @@
 ﻿  main.cpp
-C:\Users\User\Desktop\c++\grammer\29.Inheritance_Define\main.cpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
-C:\Users\User\Desktop\c++\grammer\29.Inheritance_Define\main.cpp(8,17): warning C4244: 'return': 'T2'에서 'T1'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Desktop\c++\grammer\29.Inheritance_Define\main.cpp(8,17): warning C4244:         with
-C:\Users\User\Desktop\c++\grammer\29.Inheritance_Define\main.cpp(8,17): warning C4244:         [
-C:\Users\User\Desktop\c++\grammer\29.Inheritance_Define\main.cpp(8,17): warning C4244:             T2=double
-C:\Users\User\Desktop\c++\grammer\29.Inheritance_Define\main.cpp(8,17): warning C4244:         ]
-C:\Users\User\Desktop\c++\grammer\29.Inheritance_Define\main.cpp(8,17): warning C4244:         and
-C:\Users\User\Desktop\c++\grammer\29.Inheritance_Define\main.cpp(8,17): warning C4244:         [
-C:\Users\User\Desktop\c++\grammer\29.Inheritance_Define\main.cpp(8,17): warning C4244:             T1=int
-C:\Users\User\Desktop\c++\grammer\29.Inheritance_Define\main.cpp(8,17): warning C4244:         ]
-      C:\Users\User\Desktop\c++\grammer\29.Inheritance_Define\main.cpp(8,17):
-      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
-          C:\Users\User\Desktop\c++\grammer\29.Inheritance_Define\main.cpp(27,10):
-          컴파일되는 함수 템플릿 인스턴스화 'T1 MAX<int,double>(T1,T2)'에 대한 참조를 확인하세요.
-          with
-          [
-              T1=int,
-              T2=double
-          ]
-  
   c_plus_plus.vcxproj -> C:\Users\User\Desktop\c++\c_plus_plus\x64\Debug\c_plus_plus.exe
