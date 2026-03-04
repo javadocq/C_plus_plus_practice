@@ -20,7 +20,7 @@ int main() {
 
 	sort(arr.begin(), arr.end()); // array 정렬
 
-	for_each(arr.begin(), arr.end(), [](int x) { 
+	for_each(arr.begin(), arr.end(), [](int x) {
 		cout << x << endl;
 		});
-} 
+}
