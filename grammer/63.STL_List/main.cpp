@@ -21,4 +21,4 @@ int main() {
 	myList.erase(it); // Remove the element 3
 	PrintList(myList);
 	// cout << myList[2] << endl; // This will cause a compilation error because std::list does not support operator[]
-} 
+}
