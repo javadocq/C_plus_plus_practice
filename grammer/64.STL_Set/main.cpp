@@ -22,4 +22,4 @@ int main() {
 
 	auto it = s.find(5); // set은 자체적으로 find 메서드를 가지고 있다.
 	s.clear(); // set은 자체적으로 clear 메서드를 가지고 있다.
-} 
+}
